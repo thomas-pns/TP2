@@ -17,7 +17,7 @@ def tables_tranitions(mot): # cette fonction permet de connaitre la classe d'un 
     
 
 def init(phrase):
-    #On pose ici le dictionnaire utilisé pour notre code (tout les chemin possible pour faire une phrase correcte*
+    #On pose ici le dictionnaire utilisé pour notre code (tout les chemin possible pour faire une phrase correcte)*
     
     chemins = [
         # Base article+nom+verbe (4 variantes)
@@ -81,8 +81,10 @@ def init(phrase):
             chemin_phrase.append(transition[2])
         else:  
             print("Le mot ",mot," n'est pas reconnu par l'automate")
-            return
+            
 
-    
+
+    print("Le chemin de la phrase est :", chemin_phrase)
+    print(chemin_phrase in chemins)
     return chemin_phrase in chemins #si le chamin de la phrase est dans les chemins possibles, alors la phrase est correcte, sinon elle est incorrecte
 

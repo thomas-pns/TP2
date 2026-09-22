@@ -10,7 +10,7 @@ Par :
 Réalisé le 22/09/2026
 
 ToDo List:
-    TOUT
+    Ajouter de nouveaux mots au ductionnaire.
 """
 import sys
 from typing import Dict, List, Tuple
@@ -22,8 +22,10 @@ phrase = input("Entrez une phrase (7 mots maximum) > ").strip()
 
 print("Votre phrase est :", phrase)
 
-if fonctions.init(phrase)==False:
-    print("Erreur : La phrase n'est pas syntaxiquement correct.")
-else:
+#Phrase de conclusion
+syntaxe = fonctions.init(phrase)
+if syntaxe:
     print("La phrase est syntaxiquement correcte.") 
+else:
+    print("Erreur : La phrase n'est pas syntaxiquement correct.")
 
